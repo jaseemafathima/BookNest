@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bookNest</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.jpeg"
+</head>
+<body style="background-image:url(off\ white\ background.jpeg)">
+    <div id="bar">
+        <h1 class="heading">BookNest 📖 </h1>
+    </div>
+    <div class="box-container">
+        <div class="story">
+            <h2 style="color: #D4AF37" class="title">The Road Not Taken</h2>
+            <h3 style="color: white;" class="author">Robert Frost</h3>
+            <p class="description" >a traveler reaches a fork in a yellow autumn forest. Forced to choose, he inspects one path before taking the other, which looks just as fair. He reflects that his choice will lead to a future story told with a sigh about taking the road less traveled</p>
+            <button class="delete" onclick="deletestory(event)">Delete</button>
+        </div>
+        <div class="story">
+            <h2 style="color: #D4AF37" class="title">Nothing Gold Can Stay </h2>
+            <h3 style="color: white;" class="author">Robert Frost</h3>
+            <p class="description" >Nature’s first green is gold, Her hardest hue to hold.Her early leaf’s a flower;But only so an hour. Then leaf subsides to leaf. So Eden sank to grief, So dawn goes down to day. Nothing gold can stay.</p>
+            <button class="delete" onclick="deletestory(event)">Delete</button>
+        </div>          
+    </div>
+    <button id="add" onclick="add()">+</button>
+    <div id="popup-overlay"></div>
+    <div id="popup-box">
+        <form>
+            <h2>Add Book</h2>
+            <input type="text" placeholder="Book Title" id="book-title">
+            <input type="text" placeholder="Author" id="book-author">
+            <textarea "text" placeholder="description" id="book-description"></textarea>
+            <button id="add-book" type="submit">ADD</button>
+            <button id="cancel-book" type="button">CANCEL</button>
+        </form>
+    </div>
+    <script>
+        let back=document.getElementById("popup-overlay");
+        let box=document.getElementById("popup-box");
+        var addBtn = document.getElementById("add");
+        var cancelBtn = document.getElementById("cancel-book");
+        addBtn.addEventListener("click", function() {
+            back.style.display = "block";
+            box.style.display = "block";
+        });
+
+        cancelBtn.addEventListener("click", function(event) {
+            event.preventDefault();
+            booktitle.value="";
+            bookauthor.value="";
+            bookdescription.value="";
+            back.style.display = "none";
+            box.style.display = "none";
+        });
+        var boxcontainer=document.querySelector(".box-container");
+        var addbook=document.getElementById("add-book");
+        var booktitle=document.getElementById("book-title");
+        var bookauthor=document.getElementById("book-author");
+        var bookdescription=document.getElementById("book-description");
+
+        addbook.addEventListener("click",function(event){
+            event.preventDefault()
+            let div=document.createElement("div");
+            div.setAttribute("class","story");
+            div.innerHTML=`<h2 style="color: #D4AF37" class="title">${booktitle.value}</h2>
+            <h3 class="author">${bookauthor.value}</h3>
+            <p class="description">${bookdescription.value}</p>
+            <button class="delete" onclick="deletestory(event)">Delete</button>`
+            boxcontainer.append(div);
+            booktitle.value="";
+            bookauthor.value="";
+            bookdescription.value="";
+            back.style.display = "none";
+            box.style.display = "none";
+            
+
+        
+        });
+
+        function deletestory(event)
+        {
+            event.target.parentElement.remove();
+        };
+    </script>   
+</body>
+</html>
