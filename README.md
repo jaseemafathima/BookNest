@@ -26,9 +26,8 @@ BookNest is a simple and user-friendly book management website designed to help 
 ```text
 BookNest/
 │
-├── index.html
+├── front.html
 ├── style.css
-├── script.js
 └── images/
 ```
 
