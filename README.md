@@ -1,41 +1,39 @@
-# 🧠 Mindmate – AI Chatbot
+# 📚 BookNest – Your Personal Book Collection
 
-### An AI-powered conversational chatbot built using Python.
+Welcome to **BookNest**!
 
-## 📌 About the Project
+BookNest is a simple and user-friendly book management website designed to help users add, view, and manage their personal book collections.
 
-Mindmate is an AI chatbot developed using Python to provide users with an interactive conversational experience.
+## ✨ Features
 
-The project explores the use of Artificial Intelligence to create a simple and user-friendly chatbot application.
+- 📖 Add new books to your collection.
+- 📝 Enter book title, author name, and description.
+- ➕ Add books using a popup form.
+- ❌ Cancel the popup without adding a book.
+- 💾 Store book details using Local Storage.
+- 🎨 Attractive and user-friendly interface.
+- 📱 Simple and clean website design.
 
 ## 🛠️ Technologies Used
 
-- Python
-- Streamlit
-- Ollama
-
-## ✨ Key Highlights
-
-- AI-powered conversations.
-- Interactive user interface.
-- Python-based application.
-- Local AI integration using Ollama.
+- HTML5 – Website structure.
+- CSS3 – Styling and layout.
+- JavaScript – Functionality and interactivity.
+- Local Storage – Saving book details in the browser.
 
 ## 📂 Project Structure
 
 ```text
-Mindmate/
+BookNest/
 │
-├── app.py
-├── requirements.txt
-└── README.md
+├── index.html
+├── style.css
+├── script.js
+└── images/
 ```
 
-## 👩‍💻 Developed By
-
-**Jaseema Fathima**
-
-
+## Developed By
+Jaseema Fathima
 ---
 
-⭐ Thank you for visiting my repository!
+**Made with ❤️ and ☕ – BookNest**
